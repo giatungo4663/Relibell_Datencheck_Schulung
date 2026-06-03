@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Schulung Datencheck</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Schulung Datencheck Konformitätserklärung</h1>
+  <p>Klicke auf einen Hotspot im Formular.</p>
+</header>
+
+<div class="toolbar">
+  <label>
+    <input type="checkbox" id="finderMode">
+    Koordinaten-Finder aktivieren
+  </label>
+
+  <span id="coordinates">Noch keine Position gewählt</span>
+</div>
+
+<main id="pdfPages"></main>
+
+<div id="modal" class="modal">
+  <div class="modal-content" id="modalContent">
+
+    <div class="modal-header" id="modalHeader">
+      <h2 id="modalTitle"></h2>
+      <button class="close-btn" onclick="closeModal()">x</button>
+    </div>
+
+    <div class="modal-body">
+      <div id="modalText"></div>
+      <div id="modalDownloads" class="download-list"></div>
+    </div>
+  </div>
+</div>
+
+<div id="imageModal" class="image-modal">
+  <div class="image-toolbar">
+    <button id="zoomOutBtn">-</button>
+    <button id="zoomResetBtn">100%</button>
+    <button id="zoomInBtn">+</button>
+    <button id="imageClose">x</button>
+  </div>
+
+  <div class="image-stage" id="imageStage">
+    <img
+      id="zoomedImage"
+      class="zoomed-image"
+      src=""
+      alt="Zoom Bild"
+    >
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
